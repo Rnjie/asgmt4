@@ -11,6 +11,7 @@ class Graph {
 	public Graph(int[][] _adj) {
 		adj = _adj;
 		n = adj.length;
+		System.out.println(n);
 	}
 
 	public void printGraph(String outFile) throws IOException {

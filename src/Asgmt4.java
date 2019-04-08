@@ -52,11 +52,12 @@ public class Asgmt4 {
 		
 		for(int k=0; k<n;k++) {
 			adj[i][k]=verts.get(i).difference(verts.get(k));
-			System.out.print(adj[i][k]);
+			//Test to see weight matrix
+			//System.out.print(adj[i][k]);
 			
 							}
-		//Test to see weight matrix
-		//System.out.print(adj[i][k]);
+		
+		//System.out.println();
 		}
 		
 
