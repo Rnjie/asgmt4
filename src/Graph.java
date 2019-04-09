@@ -2,7 +2,6 @@
 
 import java.io.PrintWriter;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.PriorityQueue;
 
 class Graph {
@@ -12,7 +11,7 @@ class Graph {
 	public Graph(int[][] _adj) {
 		adj = _adj;
 		n = adj.length;
-		
+		System.out.println(n);
 	}
 
 	public void printGraph(String outFile) throws IOException {
@@ -24,39 +23,7 @@ class Graph {
 	}
 
 	private void DFS(int u, boolean[] vis, PrintWriter pr) {
-		// TODO: Implement DFS(Depth First Traversal), printing edges to pr as it functions
-		
-		vis[u]=true;   //Current node has been visited as not to visit again
-		
-		//Traverses through each matrix printing to file the Edge Weight 
-		//Refer to slide 11 from 06 - Graphs - (5) Traversals -- 1 sld-pp
-		 for(int j=0; j<getn(); j++) {
-			  
-			       if(!vis[j] ) {
-			    	 
-			    	     
-			     for(int k=0; k<getn(); k++) {
-			      
-				 pr.print(u+"-"+k+" ");
-				 pr.println("\t\t"+adj[u][k]);
-				 
-			        }
-			     DFS(j, vis,pr); 
-			     
-			       }
-			   }
-		 }
-			 
-		
-			 
-		 
-		 
-	
-
-	private int getn() {
-		// TODO Auto-generated method stub
-	
-		return this.n;
+		// TODO: Implement DFS, printing edges to pr as it functions
 	}
 
 	public void printMST(String outFile) throws IOException {
@@ -82,4 +49,3 @@ class Graph {
 		 */
 	}
 }
-
